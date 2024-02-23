@@ -1,0 +1,156 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    color: white;
+    list-style: none;
+    overflow: hidden;
+}
+
+a:visited{
+    color: white;
+}
+
+a:link{
+    color: white;
+}
+
+.container_ayo_card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.made_in {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+}
+
+.text_made_in {
+    color: white;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.section_container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 100px;
+    padding-bottom: 40px;
+}
+
+
+.profile_card{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile_card_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: wheat;
+}
+
+.text_description_tile_set_card{
+    display: flex;
+    margin: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: #747982;
+}
+
+.text_description_tile_set_card span{
+    position: relative;
+}
+
+.text_description_tile_set_card span::before{
+    content: '';
+    color: #747982;
+    animation: text 20s infinite linear;
+    border-bottom: 2px solid #747982;
+}
+
+.text_description_tile_set_card span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #747982;
+    right: -10px;
+    animation: mouse_cursor .8s infinite, typying 20s steps(15) infinite;
+    width: calc(100% + 10px);
+    background-color: black;
+}
+
+@keyframes typying {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 10px);
+    }
+}
+
+@keyframes mouse_cursor{
+    0%{
+        border-left: 2px solid black;
+    }
+
+}
+
+@keyframes text {
+    0%, 20%{
+        content: '404';
+        color: #747982;
+    }
+    21%, 41%{
+        content: '444';
+        color: #747982;
+    }aaa
+    41%, 60%{
+        content: '404';
+        color: #747982;
+    }
+    61%,80%{
+        content: '444';
+        color: #747982;
+    }
+    81%,100%{
+        content: '404';
+        color: #747982;
+    }
+}
+
+.social_icons{
+    margin-right: 1px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.spotify_widget{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
